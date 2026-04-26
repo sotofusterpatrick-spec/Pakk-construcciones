@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="google-site-verification" content="xS0VrSi295H0qsdNut-1f1ud3kuFzHLrUz8NKq4zwA0" />
+<title>Pakk Construcciones</title>
+<meta name="description" content="Expertos en construcción, remodelación y acabados en Lima. Calidad, seguridad y confianza.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="icon" href="logo/logo1.jpeg" type="image/jpeg">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body, html {
+  overflow-x: hidden; /* 👈 elimina ese espacio raro */
+}
+
+body {
+  background: #0918e723;
+  overflow-x: hidden;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.contenido {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* HEADER */
+header {
+  background: rgba(0,0,0,0.8);
+  color: white;
+  position: fixed;
+  width: 100%;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1000;
+  flex-wrap: wrap;
+}
+
+header h2 {
+  color: white;
+  font-family: arial, sans-serif;
+  text-shadow: 5px 5px 10px blue;
+}
+
+nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* HERO */
+.hero {
+  min-height: 100vh; /* 👈 clave */
+  width: 100%;
+  background: url('./img/logotipo.jpg') no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.hero h1 {
+  font-size: 50px;
+  color: white;
+}
+
+.hero p {
+  margin: 15px 0;
+  color: white;
+}
+
+.btn {
+  background: rgb(31, 31, 236);
+  border: none;
+  padding: 12px 25px;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* SECCIONES */
+section {
+  padding: 100px 50px;
+  text-align: center;
+}
+
+/* SERVICIOS */
+.servicios {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.servicio {
+  flex: 1 1 200px;
+}
+
+.card {
+  background: white;
+  margin: 15px;
+  padding: 25px;
+  border-radius: 10px;
+  width: 250px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+/* GALERIA */
+.galeria img {
+  padding: 10px;
+  width: 250px;
+  height: 350px;
+  object-fit: cover;
+  margin: center;
+  border-radius: 15px;
+  transition: transform 0.3s;
+}
+
+
+/* CONTACTO */
+input, textarea {
+  width: 60%;
+  padding: 12px;
+  margin: 10px;
+  border: 1px solid #ccc;
+}
+
+footer {
+  background: #222;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.hero {
+  text-shadow: blue 5px 5px 10px;
+}
+
+#nosotros p {
+  max-width: 600px;
+  margin: auto;
+  font-size: large;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+/* MENÚ MÓVIL */
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* MÓVIL */
+@media (max-width: 768px) {
+
+  nav {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #111;
+    width: 200px;
+    display: none;
+    flex-direction: column;
+  }
+
+  nav a {
+    padding: 10px;
+    display: block;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+  h1 {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  .contenido {
+    padding: 15px;
+  }
+
+  #nosotros p {
+    padding: 0 15px;
+    font-size: 15px;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <h2>Pakk Construcciones</h2>
+
+  <div class="menu-toggle" onclick="toggleMenu()">
+    ☰
+</div>
+  <nav id="nav">
+    <a href="#inicio">Inicio</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#galeria">Galería</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section id="inicio" class="hero">
+  <h1>Construcción y Remodelación en Lima</h1>
+<p>Más de 10 años creando hogares modernos, seguros y de alta calidad</p>
+<button class="btn" onclick="whatsapp(957635221)">Solicita tu presupuesto GRATIS</button>
+</section>
+
+<section id="nosotros">
+  <h2>Sobre Nosotros</h2>
+  <p>
+    En Pakk Construcciones contamos con experiencia en construcción y remodelación en Lima. 
+    Nos especializamos en ofrecer soluciones de calidad, cumpliendo plazos y garantizando la satisfacción de nuestros clientes.
+  </p>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios">
+  <h2>Nuestros Servicios</h2>
+  <div class="servicios">
+    <div class="card">🏗 Construcción de viviendas</div>
+    <div class="card">🔧 Remodelaciones</div>
+    <div class="card">🎨 Pintura y acabados</div>
+    <div class="card">⚡ Instalaciones eléctricas</div>
+  </div>
+</section>
+
+<section>
+  <h2>¿Por qué elegirnos?</h2>
+  <div class="servicios">
+    <div class="card">✔ Garantía de calidad</div>
+    <div class="card">✔ Personal especializado</div>
+    <div class="card">✔ Entregas puntuales</div>
+    <div class="card">✔ Atención personalizada</div>
+  </div>
+</section>
+
+<!-- GALERIA -->
+<section id="galeria" class="galeria">
+  <h2>Trabajos Realizados</h2>
+  <img src="./img/sala1.jpeg" alt="Trabajo 1">
+  <img src="./img/sala2.jpeg" alt="Trabajo 2">
+  <img src="./img/baño1.jpeg" alt="Trabajo 3">
+  <img src="./img/baño2.jpeg" alt="Trabajo 4">
+  <img src="./img/ducha1.jpeg" alt="Trabajo 5">
+  <img src="./img/ducha2.jpeg" alt="Trabajo 6">
+  <br>
+  <img src="./img/construccion1.jpeg" alt="Trabajo 7">
+  <img src="./img/construccion2.jpeg" alt="Trabajo 8">
+  <img src="./img/construccion3.jpeg" alt="Trabajo 9">
+  <br>
+  <img src="./img/cuarto.jpeg" alt="Trabajo 10">
+  <img src="./img/cuarto2.jpeg" alt="Trabajo 11">
+  <img src="./img/cuarto3.jpeg" alt="Trabajo 12">
+  <img src="./img/cuarto4.jpeg" alt="Trabajo 13">
+  <img src="./img/cuarto6.jpeg" alt="Trabajo 14">
+  <img src="./img/cuarto7.jpeg" alt="Trabajo 15">
+</section>
+
+<section id="galeria" class="galeria">
+  <h2>Muebles</h2>
+  <img src="./img/tele1.jpeg" alt="Trabajo 3">
+  <img src="./img/tele2.jpeg" alt="Trabajo 4">
+  <img src="./img/ropero1.jpeg" alt="Trabajo 5">
+  <img src="./img/ropero2.jpeg" alt="Trabajo 6">
+  <img src="./img/mueble1.jpeg" alt="Trabajo 7">
+  <img src="./img/mueble2.jpeg" alt="Trabajo 8">
+  <img src="./img/mueble3.jpeg" alt="Trabajo 9">
+  <img src="./img/acabado1.jpeg" alt="Trabajo 10">
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto">
+  <h2>Contáctanos</h2>
+  <form onsubmit="return enviarWhatsApp()">
+    <input type="text" id="nombre" placeholder="Nombre y apellido"><br>
+    <input type="tel" id="numero" placeholder="Número de teléfono"><br>
+    <textarea id="mensaje" placeholder="Cuéntanos sobre tu proyecto"></textarea><br>
+    <button class="btn" type="submit">Enviar</button>
+  </form>
+</section>
+
+<footer>
+  © 2026 Pakk Construcciones- Lima, Perú
+</footer>
+
+<script>
+function whatsapp() {
+  window.open("https://wa.me/51957635221", "_blank");
+}
+
+function enviarWhatsApp() {
+  let nombre = document.getElementById("nombre").value;
+  let numeroCliente = document.getElementById("numero").value;
+  let mensaje = document.getElementById("mensaje").value;
+
+  if (nombre === "" || numeroCliente === "" || mensaje === "") {
+    alert("Completa todos los campos");
+    return false;
+  }
+
+  let texto = `Hola, quiero información sobre sus servicios%0A
+Nombre: ${nombre}%0A
+Número: ${numeroCliente}%0A
+Mensaje: ${mensaje}%0A ¿Podrían enviarme su cotización?`;
+
+  let numeroNegocio = "51957635221"; // 👈 número de tu papá
+
+  let url = `https://wa.me/${51957635221}?text=${texto}`;
+
+  window.open(url, "_blank");
+
+  return false;
+}
+
+// Animación al hacer scroll
+window.addEventListener("scroll", () => {
+  let cards = document.querySelectorAll(".card");
+  cards.forEach(card => {
+    let pos = card.getBoundingClientRect().top;
+    let screen = window.innerHeight;
+
+    if (pos < screen - 50) {
+      card.style.opacity = 1;
+      card.style.transform = "translateY(0)";
+    }
+  });
+});
+
+document.querySelectorAll(".card").forEach(card => {
+  card.style.opacity = 0;
+  card.style.transform = "translateY(50px)";
+  card.style.transition = "0.6s";
+});
+
+/* Menú móvil */
+function toggleMenu() {
+  let nav = document.getElementById("nav");
+
+  if (nav.style.display === "flex") {
+    nav.style.display = "none";
+  } else {
+    nav.style.display = "flex";
+  }
+}
+
+
+</script>
+
+</body>
+</html>
